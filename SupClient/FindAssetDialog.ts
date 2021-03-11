@@ -70,6 +70,7 @@ export default class FindAssetDialog extends Dialogs.BaseDialog<FindAssetResult>
     SupClient.html("span", "name", { parent: this.tooManyResultsElt });
 
     this.parseEntries();
+    this.searchResults();
   }
 
   private parseEntries() {
@@ -91,10 +92,18 @@ export default class FindAssetDialog extends Dialogs.BaseDialog<FindAssetResult>
     this.treeView.treeRoot.innerHTML = "";
 
     const query = this.searchElt.value.replace(/ /g, "");
-    if (query === "") return;
+    // if (query === "") return;
 
     const options: Fuzzysort.KeyOptions = { allowTypo: true, threshold: -100000, key: "path" };
-    const results = fuzzysort.go<FuzzyEntry>(query, this.fuzzyEntries, options);
+    let results = fuzzysort.go<FuzzyEntry>(query, this.fuzzyEntries, options);
+    if (query === "") {
+      let resArr = [];
+      for (let entries of this.fuzzyEntries) {
+        resArr.push({obj: entries, score: 1, target: entries.path.target, indexes: []});
+      }
+      (results as any) = resArr;
+      (results as any).total = this.fuzzyEntries.length;
+    }
 
     if (results.length === 0) {
       this.tooManyResultsElt.querySelector("span").textContent = i18n.t("common:findAsset.noResults");
