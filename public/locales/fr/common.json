@@ -5,23 +5,31 @@
   "none": "(Vide)",
 
   "findAsset": {
-    "placeholder": "Rechercher des assets"
+    "placeholder": "Rechercher des assets",
+    "moreResults": "et ${results} autres résultats...",
+    "noResults": "Pas de résultat trouvé."
   },
 
   "actions": {
     "applyChanges": "Appliquer les modifications",
     "applyChangesWithErrors": "Appliquer les modifications avec erreurs",
     "cancel": "Annuler",
+    "clear": "Vider",
     "close": "Fermer",
     "create": "Créer",
     "delete": "Supprimer",
     "download": "Télécharger",
     "duplicate": "Dupliquer",
+    "export": "Exporter",
+    "filter": "Filtrer",
+    "import": "Importer",
     "new": "Nouveau",
     "open": "Ouvrir",
     "rename": "Renommer",
+    "restore": "Restorer",
     "save": "Sauvegarder",
-    "search": "Chercher",
+    "search": "Rechercher",
+    "select": "Selectionner",
     "skip": "Ignorer",
     "update": "Mettre à jour",
     "upload": "Uploader",

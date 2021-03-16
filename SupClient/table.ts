@@ -142,6 +142,7 @@ export function appendColorField(parent: HTMLElement, color: string) {
 
   const textField = appendTextField(colorParent, "");
   textField.classList.add("color");
+  textField.pattern = "[0-9A-Fa-f]{6}";
 
   const pickerField = SupClient.html("input", { parent: colorParent, type: "color" }) as HTMLInputElement;
 
