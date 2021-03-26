@@ -58,7 +58,7 @@ if (runButton.hidden || runButton.disabled) return;
 
   if (SupApp != null) {
     if (runWindow == null) {
-      runWindow = SupApp.openWindow(`${window.location.origin}/serverBuild`);
+      runWindow = SupApp.openWindow(`${window.location.origin}/serverBuild`, { frame: true });
       runWindow.setMenuBarVisibility(false);
       runWindow.on("closed", onCloseRunWindow);
 
@@ -123,7 +123,7 @@ function openStartBuildDialog() {
       buildWindow = null;
     }
 
-    buildWindow = SupApp.openWindow(`${window.location.origin}/build/?project=${SupClient.query.project}`, { size: { width: 600, height: 150 }, resizable: false });
+    buildWindow = SupApp.openWindow(`${window.location.origin}/build/?project=${SupClient.query.project}`, { size: { width: 600, height: 170 }, resizable: false });
     buildWindow.on("closed", onCloseBuildWindow);
 
     buildButton.disabled = true;

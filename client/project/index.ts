@@ -33,6 +33,16 @@ function start() {
     toggleNotificationsButton.title = SupClient.i18n.t("project:header.notifications.disable");
   }
 
+  const minimizeButton = document.querySelector(".top .controls button.minimize") as HTMLButtonElement;
+  minimizeButton.addEventListener("click", () => { SupApp.getCurrentWindow().minimize(); });
+  const maximizeButton = document.querySelector(".top .controls button.maximize") as HTMLButtonElement;
+  maximizeButton.addEventListener("click", () => {
+    const window = SupApp.getCurrentWindow();
+    window.isMaximized() ? window.unmaximize() : window.maximize();
+  });
+  const closeButton = document.querySelector(".top .controls button.close") as HTMLButtonElement;
+  closeButton.addEventListener("click", () => { SupApp.getCurrentWindow().close(); });
+
   sidebar.start();
   tabs.start();
   network.connect();

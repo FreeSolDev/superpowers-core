@@ -14,6 +14,7 @@ body { display: flex; }
     cursor pointer
     &:hover { opacity: 1; }
     &:disabled { opacity: 0.2; cursor: default; }
+    -webkit-app-region: no-drag
 
 .project-management
   display flex
@@ -21,6 +22,7 @@ body { display: flex; }
   background rgba(0,0,0,0.65)
   color #eee
   line-height 1
+  -webkit-app-region: drag
 
 .project-name
   font-weight bold
@@ -174,12 +176,17 @@ body { display: flex; }
     flex-shrink: 0;
     background: #eee;
     height: 36px;
+    -webkit-app-region: drag;
   }
 
   .tabs-bar {
     flex: 1;
     background: #eee;
     border-bottom: 1px solid #aaa;
+
+    .tab-strip li {
+      -webkit-app-region: no-drag;
+    }
   }
 
   .panes {
@@ -241,6 +248,7 @@ body { display: flex; }
     box-shadow: none;
     border-radius: 0;
     outline: none;
+    -webkit-app-region: no-drag;
   }
 
   .toggle-notifications {
@@ -251,5 +259,23 @@ body { display: flex; }
     &.disabled { background: url(/images/controls/notifications-disabled.svg); }
     &.disabled:hover { background: url(/images/controls/notifications-disabled-hover.svg); }
     &.disabled:active { background: url(/images/controls/notifications-disabled-active.svg); }
+  }
+
+  .minimize {
+    background: url(/images/controls/minimize-window.svg);
+    &:hover { background: url(/images/controls/minimize-window-hover.svg); }
+    &:active { background: url(/images/controls/minimize-window-active.svg); }
+  }
+
+  .maximize {
+    background: url(/images/controls/maximize-window.svg);
+    &:hover { background: url(/images/controls/maximize-window-hover.svg); }
+    &:active { background: url(/images/controls/maximize-window-active.svg); }
+  }
+
+  .close {
+    background: url(/images/controls/close-window.svg);
+    &:hover { background: url(/images/controls/close-window-hover.svg); }
+    &:active { background: url(/images/controls/close-window-active.svg); }
   }
 }

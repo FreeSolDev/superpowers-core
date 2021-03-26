@@ -23,7 +23,12 @@ const toggleDetailsButton = document.querySelector("button.toggle-details") as H
 toggleDetailsButton.addEventListener("click", () => {
   detailsContainer.hidden = !detailsContainer.hidden;
   toggleDetailsButton.textContent = SupClient.i18n.t("build:" + (detailsContainer.hidden ? "showDetails" : "hideDetails"));
-  SupApp.getCurrentWindow().setContentSize(SupApp.getCurrentWindow().getContentSize()[0], detailsContainer.hidden ? 150 : 350);
+  SupApp.getCurrentWindow().setContentSize(SupApp.getCurrentWindow().getContentSize()[0], detailsContainer.hidden ? 170 : 350);
+});
+
+const closeButton = document.querySelector("button.close") as HTMLButtonElement;
+closeButton.addEventListener("click", () => {
+  SupApp.getCurrentWindow().close();
 });
 
 function loadPlugins(buildSetup: BuildSetup, callback: Function) {

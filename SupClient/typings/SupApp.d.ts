@@ -16,6 +16,7 @@ declare global {
       size?: { width: number; height: number; };
       minSize?: { width: number; height: number; };
       resizable?: boolean;
+      frame?: boolean;
     }
 
     export function openLink(url: string): void;
