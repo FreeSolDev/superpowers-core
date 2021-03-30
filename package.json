@@ -14,7 +14,7 @@
     "package": "node scripts/package.js"
   },
   "superpowers": {
-    "appApiVersion": 5
+    "appApiVersion": 6
   },
   "devDependencies": {
     "@types/async": "^2.4.1",
