@@ -31,6 +31,9 @@ const ignoredFiles = [
   "config.json", "registry.json", "tsd.json", "tslint.json",
   "CONTRIBUTING.md", "CODE_OF_CONDUCT.md"
 ];
+const includedPlugins = [
+  "common", "default", "extra"
+];
 function shouldIgnore(file) {
   file = file.substring(sourceRootPath.length + 1).replace(/\\/g, "/");
 
@@ -55,12 +58,33 @@ function shouldIgnore(file) {
   if (_.endsWith(file, ".ts")) return true;
   if (_.startsWith(file, "scripts")) return true;
   if (_.startsWith(file, "systems")) return true;
+  if (_.startsWith(file, "packages")) return true;
   if (_.startsWith(file, "workbench")) return true;
   if (_.startsWith(file, "builds") || _.startsWith(file, "projects")) return true;
   if (ignoredFiles.indexOf(file) !== -1) return true;
 
   return false;
 };
+
+function packagePlugins() {
+  const pluginsAuthors = fs.readdirSync(targetRootPath + `/plugins`);
+  if (pluginsAuthors) {
+    for (var author of pluginsAuthors) {
+      if (includedPlugins.indexOf(author) !== -1) continue;
+      let plugins = fs.readdirSync(targetRootPath + `/plugins/` + author);
+      for(let plugin of plugins) {
+        const pluginFolder = targetRootPath + `/plugins/` + author + `/` + plugin;
+        const pluginInfo = require(`${pluginFolder}/package.json`);
+        const pluginPackageName = `superpowers-${packageName}-${plugin}-plugin-${pluginInfo.version}`;
+        fs.rmdirSync(targetRootPath + `/../` + pluginPackageName, {recursive: true});
+        fs.renameSync(pluginFolder, targetRootPath + `/../` + pluginPackageName);
+        console.log(`Generating archive for ${pluginPackageName}.`);
+        child_process.execSync(`zip --symlinks -r ${pluginPackageName}.zip ${pluginPackageName}`, { cwd: packagesPath });
+      }
+      fs.rmdirSync(targetRootPath + `/plugins/` + author);
+    }
+  }
+}
 
 console.log(`Packaging ${folderName} in ${targetRootPath}...`);
 
@@ -90,6 +114,9 @@ readdirRecursive(sourceRootPath, [ shouldIgnore ], (err, files) => {
       cb();
     });
   }, () => {
+    if(fs.existsSync(targetRootPath + `/plugins`))
+      packagePlugins(targetRootPath);
+    
     console.log(`Generating archive for ${folderName}.`);
     try {
       child_process.execSync(`zip --symlinks -r ${folderName}.zip ${folderName}`, { cwd: packagesPath });
