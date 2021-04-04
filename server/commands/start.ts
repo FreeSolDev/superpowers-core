@@ -319,7 +319,7 @@ function onSystemsLoaded() {
   hub = new ProjectHub(io, dataPath, (err: Error) => {
     if (err != null) { SupCore.log(`Failed to start server:\n${(err as any).stack}`); return; }
 
-    SupCore.log(`Loaded ${Object.keys(hub.serversById).length} projects from ${hub.projectsPath}.`);
+    if (hub) SupCore.log(`Loaded ${Object.keys(hub.serversById).length} projects from ${hub.projectsPath}.`);
 
     const hostname = (config.server.password.length === 0) ? "localhost" : "";
 
