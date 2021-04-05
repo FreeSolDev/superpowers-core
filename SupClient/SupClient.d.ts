@@ -77,8 +77,9 @@ declare namespace SupClient {
 
     class AssetFieldSubscriber extends SupCore.EventEmitter {
       entries: SupCore.Data.Entries;
+      assetId: string;
 
-      constructor(assetId: string, projectClient: ProjectClient, callback: (assetId: string) => void);
+      constructor(assetId: string, projectClient: ProjectClient);
       destroy(): void;
       selectAssetId(assetId: string): void;
       onChangeAssetId(assetId: string): void;

@@ -5,6 +5,7 @@
   "none": "(Vide)",
 
   "findAsset": {
+    "title": "Choisir un asset",
     "placeholder": "Rechercher des assets",
     "moreResults": "et ${results} autres résultats...",
     "noResults": "Pas de résultat trouvé."

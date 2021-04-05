@@ -26,7 +26,17 @@ export default class FindAssetDialog extends Dialogs.BaseDialog<FindAssetResult>
     super(callback);
 
     this.dialogElt.classList.add("find-asset-dialog");
-
+    this.dialogElt.onclick = () => {
+      this.cancel();
+    };
+    this.formElt.onclick = (ev) => {
+      ev.stopPropagation();
+    };
+    SupClient.html("span", { parent: this.formElt, style: { position: "absolute" }, textContent: i18n.t("common:findAsset.title") });
+    const closeButton = SupClient.html("input", "close", { parent: this.formElt, type: "button" });
+    closeButton.onclick = () => {
+      this.cancel();
+    };
     const searchGroup = SupClient.html("div", "group", { parent: this.formElt, style: { display: "flex" } });
     this.searchElt = SupClient.html("input", {
       parent: searchGroup, type: "search",

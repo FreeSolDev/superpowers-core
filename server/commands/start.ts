@@ -98,7 +98,7 @@ export default function start(serverDataPath: string) {
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30 }
   };
 
-  const authLimiter = new RateLimiter({ windowMs: 5 * 60 * 1000, max: 5 });
+  const authLimiter = new RateLimiter({ windowMs: 2 * 60 * 1000, max: 10 });
 
   function doHttpBasicAuth(req: express.Request, res: express.Response, next: express.NextFunction) {
     authLimiter(req, res, () => {

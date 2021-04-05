@@ -5,6 +5,7 @@
   "none": "(None)",
 
   "findAsset": {
+    "title": "Select an asset",
     "placeholder": "Search for assets",
     "moreResults": "and ${results} more results...",
     "noResults": "No results found."

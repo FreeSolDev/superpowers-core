@@ -59,4 +59,22 @@
   }
 
   .assets-tree-view .tree { padding: 0; }
+
+  .close {
+    background: url(/images/controls/close-window.svg);
+    &:hover { background: url(/images/controls/close-window-hover.svg); }
+    &:active { background: url(/images/controls/close-window-active.svg); }
+
+    display: flex;
+    align-self: flex-end;
+
+    width: 30px;
+    height: 25px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-app-region: no-drag;
+    margin: -10px -10px 10px 0px;
+  }
 }
