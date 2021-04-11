@@ -1,8 +1,8 @@
 {
+  "title": "Projet",
   "header": {
     "goToHub": "Aller à l'accueil du serveur",
-    "publish": "Publier le projet",
-    "publishDisabled": "Publier le projet (uniquement disponible dans l'application Superpowers pour des raisons techniques)",
+    "buildDisabled": "Compiler le projet (uniquement disponible dans l'application Superpowers pour des raisons techniques)",
     "stop": "Arrêter le projet",
     "debug": "Déboguer le projet (F6)",
     "run": "Tester le projet (F5)",
@@ -34,5 +34,15 @@
       "checkbox": "Je comprends que cette action ne peut pas être annulée.",
       "warnBrokenDependency": "${entryName} est utilisé dans ${dependentEntryNames}."
     }
+  },
+  "build": {
+    "title": "Compiler le projet",
+    "build": "Compiler"
+  },
+  "revision": {
+    "title": "Révision",
+    "prompt": "Entrez un nom pour la nouvelle révision.",
+    "current": "Actuelle",
+    "restoring": "Restauration..."
   }
 }
