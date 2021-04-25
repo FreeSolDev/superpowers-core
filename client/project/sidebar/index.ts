@@ -3,7 +3,7 @@ import * as ResizeHandle from "resize-handle";
 import * as entriesTreeView from "./entriesTreeView";
 import * as header from "./header";
 
-export const openInNewWindowButton = SupClient.html("button", "open-in-new-window", { title: SupClient.i18n.t("project:treeView.openInNewWindow") });
+export const openInNewWindowButton = SupClient.html("button", "open-in-new-window");
 
 export function start() {
   const sidebarResizeHandle = new ResizeHandle(document.querySelector(".sidebar") as HTMLElement, "left");
@@ -15,6 +15,8 @@ export function start() {
 
   header.start();
   entriesTreeView.start();
+
+  openInNewWindowButton.title = SupClient.i18n.t("project:treeView.openInNewWindow");
 }
 
 export function enable() {
