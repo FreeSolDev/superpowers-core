@@ -631,7 +631,7 @@ export default class ProjectServer {
       };
 
       if (entry.type == null) {
-        async.each(entry.children, (entry, cb) => { trashEntryRecursively(entry, cb); }
+        async.each(entry.children.slice(), (entry, cb) => { trashEntryRecursively(entry, cb); }
         , finishTrashEntry);
       } else finishTrashEntry(null);
     };
