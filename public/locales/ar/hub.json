@@ -1,0 +1,25 @@
+{
+  "title": "المحور",
+  "serverAddress": "${hostname} على المدخل ${port}",
+  "newProject": {
+    "noSystemError": {
+      "header": "لا يمكن إنشاء المشروع",
+      "message": "هذا الخادم لا يحتوي عل اي منظومة مثبته. يرجي تنصيب وحدة من لسان إعدادات الخادم اولا."
+    },
+    "title": "مشروع جديد",
+    "prompt": "أدخل اسمًا و اختر نوع المشروع الجديد.",
+    "namePlaceholder": "أسم المشروع",
+    "descriptionPlaceholder": "وصف (إختياري)",
+    "emptyProject": {
+      "title": "مشروع فارغ",
+      "description": "مشروع فارغ للبداية من الاول."
+    },
+    "autoOpen": "الفتح بعد الإنشاء"
+  },
+  "editDetails": {
+    "title": "تحرير التفاصيل",
+    "prompt": "تحرير تفاصيل المشروع."
+  },
+  "openProject": "فتح مشروع ",
+  "language": "اللغة"
+}

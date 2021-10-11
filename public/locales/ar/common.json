@@ -1,0 +1,57 @@
+{
+  "activeLanguage": "العربية",
+
+  "namePatternDescription": "لا يمكن استخدام العلامات االتالية: \\, /, :, *, ?, \", <, >, |, [, ].",
+  "none": "(فراغ)",
+
+  "findAsset": {
+    "placeholder": "البحث عن معدات",
+    "moreResults": "و ${results} أخرى مت النتائج...",
+    "noResults": "لم يتم العثور عل شيء."
+  },
+
+  "actions": {
+    "applyChanges": "تطبيق التغيرات",
+    "applyChangesWithErrors": "تطبيق التغيرات مع الأخطاء",
+    "cancel": "إلغاء",
+    "clear": "صافًي",
+    "close": "أغلق",
+    "create": "أنشاء",
+    "delete": "حذف",
+    "download": "تنزيل",
+    "duplicate": "أستنساخ",
+    "export": "إستخراج",
+    "filter": "تصفية",
+    "import": "استيراد",
+    "new": "جديد",
+    "open": "فتح",
+    "rename": "إعادة تسمية",
+    "restore": "استرجاع",
+    "save": "حفظ",
+    "search": "بحث",
+    "select": "تحديد",
+    "skip": "تخطي",
+    "update": "تحديث",
+    "upload": "رفع",
+
+    "cut": "قص",
+    "copy": "نسخ",
+    "paste": "لصق"
+  },
+
+  "states": { 
+    "disabled": "عطل",
+    "enabled": "شغل",
+    "loading": "تحميل...",
+    "connecting": "إتصال...",
+    "saving": "يحفظ..."
+  },
+  
+  "hotkeys": {
+    "control": "Ctrl",
+    "command": "Cmd",
+    "shift": "Shift",
+    "delete": "Del",
+    "return": "Return"
+  }
+}

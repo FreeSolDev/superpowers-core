@@ -1,0 +1,48 @@
+{
+  "title": "مشروع",
+  "header": {
+    "goToHub": "الذهاب الى محور",
+    "buildDisabled": "بناء المشروع (لا يمكن البناء الى من داخل البرنامج لوجود بعض الاخطاء التقنية)",
+    "stop": "إيقاف المشروع",
+    "debug": "معالجة المشروع (F6)",
+    "run": "تشغيل المشروع (F5)",
+    "notifications": {
+      "enable": "اضغط لتشغيل الإشعارات",
+      "disable": "اضغط لإطفاء الإشعارات",
+      "new": "رسالة دردشة جديدة في مشروع \"${projectName}\""
+    }
+  },
+  "treeView": {
+    "openInNewWindow": "الفتح في نافذة جديدة",
+    "newAsset": {
+      "title": "معد جديد",
+      "prompt": "أختر نوع و ادخل اسمًا المعد الجديد.",
+      "placeholder": "أسم المعد (إختياري)",
+      "openAfterCreation": "افتح بعد الإنشاء"
+    },
+    "newFolder": {
+      "title": "مجلد جديد",
+      "prompt": "أدخل اسمًا المجلد الجديد.",
+      "placeholder": "أسم المجلد",
+      "initialValue": "مجلد"
+    },
+    "renamePrompt": "أدخل اسمًا جديد للمعد.",
+    "duplicatePrompt": "أدخل اسمًا للمعد الجديد او للمجلد",
+    "trash": {
+      "title": "النفايات",
+      "prompt": "هل أنت متأكد أنك تريد حذف الإدخالات المحددة؟",
+      "checkbox": "أنا أفهم أن هذا لا يمكن التراجع عنه.",
+      "warnBrokenDependency": "مستخدم في ${entryName}. ${dependentEntryNames} إن"
+    }
+  },
+  "build": {
+    "title": "بناء المشروع",
+    "build": "بناء"
+  },
+  "revision": {
+    "title": "مراجعة",
+    "prompt": "أدخل اسمًا للمراجعة الجديدة.",
+    "current": "الحالي",
+    "restoring": "إسترجاع..."
+  }
+}
