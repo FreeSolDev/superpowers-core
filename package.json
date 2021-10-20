@@ -79,7 +79,7 @@
     "tab-strip": "^2.3.0",
     "tsscmp": "^1.0.6",
     "tv4": "^1.2.7",
-    "typescript": "^3.9.4",
+    "typescript": "4.1.6",
     "yargs": "^3.32.0",
     "yauzl": "^2.4.1"
   }
