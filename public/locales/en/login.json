@@ -3,6 +3,7 @@
   "welcome": "Welcome to this Superpowers server!",
   "password": "Server password",
   "username": "Username",
+  "yourUsername": "Your username",
   "usernamePatternDescription": "Valid characters are: letters, numbers, dashes and underscores.",
   "logIn": "Log in"
 }
