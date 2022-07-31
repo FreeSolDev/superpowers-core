@@ -11,7 +11,7 @@
       200
     ],
     "class-name": true,
-    "variable-name": true,
+    "variable-name": [ true, "allow-leading-underscore" ],
     "comment-format": [
       true,
       "check-space"
