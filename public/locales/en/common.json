@@ -34,6 +34,7 @@
     "skip": "Skip",
     "update": "Update",
     "upload": "Upload",
+    "reconnect": "Reconnect",
 
     "cut": "Cut",
     "copy": "Copy",
@@ -54,5 +55,10 @@
     "shift": "Shift",
     "delete": "Del",
     "return": "Return"
+  },
+
+  "messages": {
+    "disconnected": "You were disconnected.",
+    "trashed": "This asset has been trashed."
   }
 }

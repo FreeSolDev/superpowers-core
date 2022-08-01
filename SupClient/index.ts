@@ -78,7 +78,7 @@ export function onAssetTrashed() {
   document.body.innerHTML = "";
 
   const h1 = document.createElement("h1");
-  h1.textContent = "This asset has been trashed.";
+  h1.textContent = i18n.t("common:messages.trashed");
 
   const div = document.createElement("div");
   div.className = "superpowers-error";
@@ -90,10 +90,10 @@ export function onDisconnected() {
   document.body.innerHTML = "";
 
   const h1 = document.createElement("h1");
-  h1.textContent = "You were disconnected.";
+  h1.textContent = i18n.t("common:messages.disconnected");
 
   const button = document.createElement("button");
-  button.textContent = "Reconnect";
+  button.textContent = i18n.t("common:actions.reconnect");
   button.addEventListener("click", () => { location.reload(); });
 
   const div = document.createElement("div");

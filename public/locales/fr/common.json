@@ -34,6 +34,7 @@
     "skip": "Ignorer",
     "update": "Mettre à jour",
     "upload": "Uploader",
+    "reconnect": "Reconnecter",
 
     "cut": "Couper",
     "copy": "Copier",
@@ -54,5 +55,10 @@
     "shift": "Maj",
     "delete": "Suppr",
     "return": "Retour"
+  },
+  
+  "messages": {
+    "disconnected": "Vous avez été déconnecté.",
+    "trashed": "Ce fichier a été supprimé."
   }
 }
