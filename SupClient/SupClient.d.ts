@@ -52,7 +52,7 @@ declare namespace SupClient {
 
     export function createTable(parent?: HTMLElement): { table: HTMLTableElement; tbody: HTMLTableSectionElement; };
     export function appendRow(parentTableBody: HTMLTableSectionElement, name: string,
-      options?: { checkbox?: boolean; title?: string; }): RowParts;
+      options?: { checkbox?: boolean; title?: string; class?: string }): RowParts;
     export function appendHeader(parentTableBody: HTMLTableSectionElement, text: string): HTMLTableRowElement;
     export function appendTextField(parentCell: HTMLElement, value: string): HTMLInputElement;
     export function appendTextAreaField(parent: HTMLElement, value: string): HTMLTextAreaElement;

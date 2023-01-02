@@ -7,7 +7,7 @@ export function createTable(parent?: HTMLElement) {
   return { table, tbody };
 }
 
-export function appendRow(parentTableBody: HTMLTableSectionElement, name: string, options?: { checkbox?: boolean; title?: string; }) {
+export function appendRow(parentTableBody: HTMLTableSectionElement, name: string, options?: { checkbox?: boolean; title?: string; class?: string }) {
   const row = SupClient.html("tr", { parent: parentTableBody});
   const labelCell = SupClient.html("th", { parent: row });
 
@@ -20,6 +20,9 @@ export function appendRow(parentTableBody: HTMLTableSectionElement, name: string
     labelCell.textContent = name;
     if (options != null && options.title != null) labelCell.title = options.title;
   }
+
+  if (options != null && options.class)
+    labelCell.classList.add(options.class);
 
   const valueCell = SupClient.html("td", { parent: row });
 
